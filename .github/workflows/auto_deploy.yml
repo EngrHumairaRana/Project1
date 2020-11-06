@@ -16,10 +16,10 @@ jobs:
     - name: Installing node
       uses: actions/setup-node@v2-beta
       with:
-        node-version: 12
+        node-version: 12  
         
     - name: Installing surge
       run: npm install --global surge
-    -name: deploying using surge
+    - name: deploying using surge
       run: surge ./ curved.surge.sh --token ${{ secrets.SURGE_TOKEN }}
         
